@@ -35,7 +35,8 @@ namespace ClgProject
             UIClickEvents();
             ObjectCreations();
 
-            SetSupportActionBar(_toolbar);
+           
+
             SupportFragmentManager.BeginTransaction().Replace(Resource.Id.frameLayoutDashBoard, _dasboardInternsFragment).Commit();
             _toolbar.Title = Resources.GetString(Resource.String.dashboard);
         }

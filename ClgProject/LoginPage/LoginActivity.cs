@@ -5,13 +5,18 @@ using Android.Runtime;
 using Android.Widget;
 using AndroidX.AppCompat.App;
 using ClgProject.Forget_Password;
+using ClgProject.Model;
 using Google.Android.Material.TextField;
+using Newtonsoft.Json;
 using System;
+using System.Net.Http;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace ClgProject
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
     public class LoginActivity : AppCompatActivity
     {
         private TextInputLayout usernamelyt, passwordlyt;
@@ -19,6 +24,7 @@ namespace ClgProject
         private TextView forget;
         private Button LoginButton;
         private Regex validUsername = new Regex("^[A-Z]+[a-zA-Z]+(@)+[0-9]*$");
+        private string endurl = "api/Login/AuthenticateUser";
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -32,10 +38,10 @@ namespace ClgProject
         private void UIClickEvent()
         {
             forget.Click += Forget_Click;
-            LoginButton.Click += LoginButton_Click;
+            LoginButton.Click += LoginButton_ClickAsync;
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private async void LoginButton_ClickAsync(object sender, EventArgs e)
         {
             if (!checkusername() && !checkpassword())
             {
@@ -48,17 +54,24 @@ namespace ClgProject
             else
             if (checkusername() && checkpassword())
             {
+               
 
-                Toast.MakeText(this, "LoggedIn Successfully", ToastLength.Short).Show();
                 passwordlyt.Error = null;
                 usernamelyt.Error = null;
+                UserLogin userLogin = new UserLogin();
+                userLogin.UserName = usernametxt.Text;
+                userLogin.Password = passwordtxt.Text;
+                var result = await ProjectAPIModel.Post<UserLogin>(endurl, userLogin);
                 Intent Dashboard = new Intent(this, typeof(DashboardInterns));
                 StartActivity(Dashboard);
+
 
             }
 
             
         }
+
+     
 
         private bool checkpassword()
         {

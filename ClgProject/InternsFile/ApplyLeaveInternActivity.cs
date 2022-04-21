@@ -60,6 +60,8 @@ namespace ClgProject.InternsFile
             Finish();
         }
 
+
+
         private void _mytabLayout_TabSelected(object sender, TabLayout.TabSelectedEventArgs e)
         {
             Fragment _selected = null;

@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\devansh.desai\\source\\repos\\ClgProject\\ClgProject\\ClgProject.csproj": {}
+    "C:\\Users\\vedanshi.mehta\\source\\repos\\ClgProject\\ClgProject\\ClgProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devansh.desai\\source\\repos\\ClgProject\\ClgProject\\ClgProject.csproj": {
+    "C:\\Users\\vedanshi.mehta\\source\\repos\\ClgProject\\ClgProject\\ClgProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devansh.desai\\source\\repos\\ClgProject\\ClgProject\\ClgProject.csproj",
+        "projectUniqueName": "C:\\Users\\vedanshi.mehta\\source\\repos\\ClgProject\\ClgProject\\ClgProject.csproj",
         "projectName": "ClgProject",
-        "projectPath": "C:\\Users\\devansh.desai\\source\\repos\\ClgProject\\ClgProject\\ClgProject.csproj",
-        "packagesPath": "C:\\Users\\devansh.desai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devansh.desai\\source\\repos\\ClgProject\\ClgProject\\obj\\",
+        "projectPath": "C:\\Users\\vedanshi.mehta\\source\\repos\\ClgProject\\ClgProject\\ClgProject.csproj",
+        "packagesPath": "C:\\Users\\vedanshi.mehta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vedanshi.mehta\\source\\repos\\ClgProject\\ClgProject\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\devansh.desai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vedanshi.mehta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -42,9 +42,17 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Refractored.GifImageView": {
               "target": "Package",
               "version": "[2.0.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
             },
             "Xamarin.AndroidX.AppCompat": {
               "target": "Package",
@@ -53,6 +61,10 @@
             "Xamarin.AndroidX.ConstraintLayout": {
               "target": "Package",
               "version": "[2.1.1.1, )"
+            },
+            "Xamarin.AndroidX.RecyclerView": {
+              "target": "Package",
+              "version": "[1.1.0.8, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
